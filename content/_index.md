@@ -8,7 +8,8 @@ sections:
   - block: hero
     content:
       title: |
-        TimeXAI Group
+        TimeXAI
+        Group
       image:
         filename: welcome.jpg
       text: |
