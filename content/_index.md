@@ -8,14 +8,15 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        TimeXAI Group
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        Welcome to the Chair for Artificial Intelligence at the Technische Hochschule Mittelhessen - University of Applied Sciences and the Hessian Center for Artificial Intelligence (hessian.AI), lead by Prof. Dr. Jennifer Hannig. Our research focus on  ...
+
+    The **TimeXAI Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
   
   - block: collection
     content:
