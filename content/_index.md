@@ -9,13 +9,12 @@ sections:
     content:
       title: |
         TimeXAI
+        Group
       image:
         filename: welcome.jpg
       text: |
         <br>
-        
-        Das interdisziplinäre Kompetenzzentrum für Informationstechnologie (KITE) betreibt angewandte Forschung und Entwicklung zur künstlicher Intelligenz bzw. maschinellem Lernen und IT-Security. Die informatischen Ansätze und Modellierungen reichen von der Medizin (eHealth), Biologie (Bioinformatik) über die Industrie (Smart Factory) bis hin zu den Geisteswissenschaften (Digital Humanities).
-  
+        Welcome to the Chair for Artificial Intelligence at the Technische Hochschule Mittelhessen - University of Applied Sciences and the Hessian Center for Artificial Intelligence (hessian.AI), lead by Prof. Dr. Jennifer Hannig. Our research focus on  ...
   - block: collection
     content:
       title: Latest News
