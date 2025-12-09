@@ -8,14 +8,13 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        TimeXAI
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
+        Das interdisziplinäre Kompetenzzentrum für Informationstechnologie (KITE) betreibt angewandte Forschung und Entwicklung zur künstlicher Intelligenz bzw. maschinellem Lernen und IT-Security. Die informatischen Ansätze und Modellierungen reichen von der Medizin (eHealth), Biologie (Bioinformatik) über die Industrie (Smart Factory) bis hin zu den Geisteswissenschaften (Digital Humanities).
   
   - block: collection
     content:
