@@ -57,75 +57,92 @@ jobs:
           if [ -d "content/publication" ]; then
             find content/publication -name "index.md" -type f -exec sed -i 's/^author:/authors:/g' {} +
           fi
-
-      - name: Fix authors properly (AND / and etc.)
+          
+      - name: Fix authors from BibTeX (robust)
         run: |
           python << 'EOF'
           import os
           import yaml
           import re
-
+      
+          # --- BibTeX parsen ---
+          with open("publications.bib", "r", encoding="utf-8") as f:
+              bib = f.read()
+      
+          entries = re.split(r"@", bib)
+          bib_authors = {}
+      
+          for entry in entries:
+              if "author" not in entry:
+                  continue
+      
+              # key holen
+              key_match = re.match(r"(\w+)\s*{([^,]+),", entry)
+              if not key_match:
+                  continue
+      
+              key = key_match.group(2).strip()
+      
+              # author field holen
+              author_match = re.search(r"author\s*=\s*{([^}]*)}", entry, re.DOTALL)
+              if not author_match:
+                  continue
+      
+              raw_authors = author_match.group(1)
+      
+              authors = []
+              for a in re.split(r"\s+AND\s+", raw_authors):
+                  a = a.strip()
+      
+                  if "," in a:
+                      last, first = [p.strip() for p in a.split(",", 1)]
+                      authors.append(f"{first} {last}")
+                  else:
+                      authors.append(a)
+      
+              bib_authors[key] = authors
+      
+          # --- MD Dateien überschreiben ---
           base = "content/publication"
-
+      
           for root, dirs, files in os.walk(base):
               for f in files:
-                  if f == "index.md":
-                      path = os.path.join(root, f)
-
-                      with open(path, "r", encoding="utf-8") as file:
-                          content = file.read()
-
-                      if not content.startswith("---"):
-                          continue
-
-                      parts = content.split("---")
-                      if len(parts) < 3:
-                          continue
-
-                      frontmatter = yaml.safe_load(parts[1])
-
-                      if "authors" in frontmatter:
-                          raw = frontmatter["authors"]
-
-                          if isinstance(raw, list) and len(raw) == 1:
-                              raw = raw[0]
-
-                          if isinstance(raw, str):
-                              authors = [a.strip() for a in re.split(r"\s+(?i:and)\s+", raw)]
-                          
-                              clean = []
-                              for a in authors:
-                                  a = a.strip()
-                          
-                                  # entferne kaputte Zeilenumbrüche etc.
-                                  a = " ".join(a.split())
-                          
-                                  if "," in a:
-                                      name_parts = [p.strip() for p in a.split(",", 1)]
-                          
-                                      if len(name_parts) == 2:
-                                          last, first = name_parts
-                                          clean.append(f"{first} {last}")
-                                      else:
-                                          clean.append(a)
-                                  else:
-                                      clean.append(a)
-
-                              frontmatter["authors"] = clean
-
-                              new_frontmatter = yaml.dump(
-                                  frontmatter,
-                                  allow_unicode=True,
-                                  sort_keys=False,
-                                  default_flow_style=False
-                              )
-
-                              new_content = "---\n" + new_frontmatter + "---" + parts[2]
-
-                              with open(path, "w", encoding="utf-8") as file:
-                                  file.write(new_content)
-
-          print("✅ Authors fixed")
+                  if f != "index.md":
+                      continue
+      
+                  path = os.path.join(root, f)
+      
+                  with open(path, "r", encoding="utf-8") as file:
+                      content = file.read()
+      
+                  if not content.startswith("---"):
+                      continue
+      
+                  parts = content.split("---")
+                  if len(parts) < 3:
+                      continue
+      
+                  frontmatter = yaml.safe_load(parts[1])
+      
+                  # DOI als Schlüssel nutzen
+                  doi = frontmatter.get("doi", "")
+                  key = doi
+      
+                  if key in bib_authors:
+                      frontmatter["authors"] = bib_authors[key]
+      
+                      new_frontmatter = yaml.dump(
+                          frontmatter,
+                          allow_unicode=True,
+                          sort_keys=False
+                      )
+      
+                      new_content = "---\n" + new_frontmatter + "---" + parts[2]
+      
+                      with open(path, "w", encoding="utf-8") as file:
+                          file.write(new_content)
+      
+          print("✅ Authors replaced from BibTeX")
           EOF
 
       - name: Commit and push changes
