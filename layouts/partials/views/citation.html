@@ -2,83 +2,183 @@
 
 <style>
 .pub-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pub-line {
+  color: #444;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-doi {
+  background: #eee;
+  color: #333;
+}
+
+.btn-cite {
+  background: #525b6e;
+  color: white;
+}
+
+/* Modal */
+.cite-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  justify-content: center;
+  align-items: center;
+}
+
+.cite-box {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+}
+
+.cite-box pre {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+.cite-actions {
+  margin-top: 8px;
+  text-align: right;
+}
+
+.cite-actions button {
+  margin-left: 6px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
   cursor: pointer;
 }
 
-.pub-abstract {
-  display: none;
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #555;
+.cite-actions button:first-child {
+  background: #525b6e;
+  color: white;
 }
 
-.pub-card.active .pub-abstract {
-  display: block;
+.cite-actions button:last-child {
+  background: #ddd;
 }
 </style>
 
-<div class="pub-card" onclick="toggleAbstract(this)">
+<div class="pub-card">
 
-  <!-- AUTHORS -->
-  {{ with $p.Params.authors }}
-    {{- range $i, $a := . -}}
-      {{- if $i }}, {{ end -}}
-      {{- $a -}}
-    {{- end -}}.
-  {{ end }}
+  <div class="pub-line">
 
-  <!-- YEAR -->
-  {{ with $p.Params.date }}
-    ({{ time.Format "2006" . }}).
-  {{ end }}
+    <!-- AUTHORS -->
+    {{ with $p.Params.authors }}
+      {{- range $i, $a := . -}}
+        {{- if $i }}, {{ end -}}
+        {{- $a -}}
+      {{- end -}}.
+    {{ end }}
 
-  <!-- TITLE -->
-  {{ with $p.Title }}
-    <span class="pub-title">{{ . }}</span>.
-  {{ end }}
+    <!-- YEAR -->
+    {{ with $p.Params.date }}
+      ({{ time.Format "2006" . }}).
+    {{ end }}
 
-  <!-- JOURNAL -->
-  {{ with $p.Params.publication }}
-    {{ . | markdownify }}.
-  {{ end }}
+    <!-- TITLE -->
+    {{ with $p.Title }}
+      <span class="pub-title">{{ . }}</span>.
+    {{ end }}
 
-  <!-- BUTTONS -->
-  {{ with $p.Params.doi }}
-  <a class="btn btn-doi"
-     href="https://doi.org/{{ . }}"
-     target="_blank"
-     onclick="event.stopPropagation()">
-    DOI
-  </a>
-  {{ end }}
+    <!-- JOURNAL -->
+    {{ with $p.Params.publication }}
+      {{ . | markdownify }}.
+    {{ end }}
 
-  {{ with $p.File }}
-  <button class="btn btn-cite"
-    onclick="event.stopPropagation(); openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
-    Cite
-  </button>
-  {{ end }}
-
-  <!-- ABSTRACT (klappt auf) -->
-  {{ with $p.Params.abstract }}
-  <div class="pub-abstract">
-    {{ . }}
   </div>
-  {{ end }}
+
+  <!-- ACTIONS -->
+  <div class="pub-actions">
+
+    {{ with $p.Params.doi }}
+    <a class="btn btn-doi" href="https://doi.org/{{ . }}" target="_blank">
+      DOI
+    </a>
+    {{ end }}
+
+    {{ with $p.File }}
+    <button class="btn btn-cite"
+      onclick="openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
+      Cite
+    </button>
+    {{ end }}
+
+  </div>
 
 </div>
 
-<!-- CITE BOX -->
-<pre id="citeContent"></pre>
+<!-- MODAL -->
+<div id="citeModal" class="cite-modal">
+  <div class="cite-box">
 
-<div class="cite-actions">
-  <button onclick="copyCite(event)">Copy</button>
-  <button onclick="closeCite()">Close</button>
+    <pre id="citeContent"></pre>
+
+    <div class="cite-actions">
+      <button onclick="copyCite(event)">Copy</button>
+      <button onclick="closeCite()">Close</button>
+    </div>
+
+  </div>
 </div>
 
 <script>
-function toggleAbstract(card) {
-  card.classList.toggle("active");
+async function openCite(url) {
+  const res = await fetch(url);
+  const text = await res.text();
+
+  document.getElementById("citeContent").textContent = text;
+  document.getElementById("citeModal").style.display = "flex";
+}
+
+function closeCite() {
+  document.getElementById("citeModal").style.display = "none";
+}
+
+function copyCite(event) {
+  const text = document.getElementById("citeContent").textContent;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target;
+    const original = btn.textContent;
+    btn.textContent = "Copied";
+    setTimeout(() => btn.textContent = original, 1200);
+  });
 }
 </script>
-
