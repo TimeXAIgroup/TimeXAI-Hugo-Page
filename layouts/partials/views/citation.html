@@ -1,299 +1,194 @@
 {{ $p := .item }}
 
-<!-- ===================== -->
-<!-- CITATION -->
-<!-- ===================== -->
-<div class="citation-item">
+<style>
+.pub-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+}
+
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.pub-year {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.pub-journal {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.pub-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-doi {
+  background: #f3f4f6;
+  padding: 6px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: #333;
+  transition: 0.2s;
+}
+
+.btn-doi:hover {
+  background: #e5e7eb;
+}
+
+.btn-cite {
+  background: #2563eb;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.btn-cite:hover {
+  background: #1e40af;
+}
+
+/* MODAL */
+.cite-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cite-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cite-box pre {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.cite-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+</style>
+
+<div class="pub-card">
 
   <!-- AUTHORS -->
-{{ with $p.Params.authors }}
-  <span class="authors">
-    <span class="paper-icon">📘📖📄</span>
+  {{ with $p.Params.authors }}
+  <div class="pub-authors">
+    📄
     {{- range $i, $a := . -}}
       {{- if $i }}, {{ end -}}
-      <span class="author">{{- $a -}}</span>
+      {{- $a -}}
     {{- end -}}.
-  </span>
-{{ end }}
+  </div>
+  {{ end }}
 
   <!-- YEAR -->
   {{ with $p.Params.date }}
-    <span class="year">
-      ({{ time.Format "2006" . }}).
-    </span>
+  <div class="pub-year">
+    ({{ time.Format "2006" . }})
+  </div>
   {{ end }}
 
-  <!-- TITLE -->
-  <span class="title">
-    <strong>{{ $p.Title }}</strong>.
-  </span>
-
-  <!-- PUBLICATION -->
+  <!-- JOURNAL -->
   {{ with $p.Params.publication }}
-    <span class="pub">
-      {{ . | markdownify }}.
-    </span>
+  <div class="pub-journal">
+    {{ . | markdownify }}
+  </div>
   {{ end }}
 
-</div>
+  <!-- ACTIONS -->
+  <div class="pub-actions">
 
-<!-- ===================== -->
-<!-- ACTIONS -->
-<!-- ===================== -->
-<div class="citation-actions">
-
-  <!-- DOI -->
-  {{ with $p.Params.doi }}
-    <a class="btn-blue" href="https://doi.org/{{ . }}" target="_blank">
+    {{ with $p.Params.doi }}
+    <a class="btn-doi" href="https://doi.org/{{ . }}" target="_blank">
       DOI
     </a>
-  {{ end }}
+    {{ end }}
 
-  <!-- CITE -->
-  {{ with $p.File }}
-    <button class="btn-blue" onclick="openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
+    {{ with $p.File }}
+    <button class="btn-cite"
+      onclick="openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
       Cite
     </button>
-  {{ end }}
- 
+    {{ end }}
+
+  </div>
+
 </div>
 
-<!-- ===================== -->
 <!-- MODAL -->
-<!-- ===================== -->
-<div id="citeModal">
+<div id="citeModal" class="cite-modal">
   <div class="cite-box">
 
-    <textarea id="citeBox"></textarea>
+    <pre id="citeContent"></pre>
 
     <div class="cite-actions">
-      <button onclick="copyCite()">Copy</button>
+      <button onclick="copyCite(event)">Copy</button>
       <button onclick="closeCite()">Close</button>
     </div>
 
   </div>
 </div>
 
-<!-- ===================== -->
-<!-- SCRIPT -->
-<!-- ===================== -->
 <script>
 async function openCite(url) {
-  try {
-    const res = await fetch(url);
-    const text = await res.text();
+  const res = await fetch(url);
+  const text = await res.text();
 
-    const modal = document.getElementById("citeModal");
-    const box = document.getElementById("citeBox");
-
-    box.value = text;
-
-    // simple + stable show
-    modal.classList.add("active");
-
-  } catch (e) {
-    console.error(e);
-    alert("Could not load cite.bib");
-  }
+  document.getElementById("citeContent").textContent = text;
+  document.getElementById("citeModal").style.display = "flex";
 }
 
 function closeCite() {
-  document.getElementById("citeModal").classList.remove("active");
+  document.getElementById("citeModal").style.display = "none";
 }
 
-function copyCite() {
-  const el = document.getElementById("citeBox");
-  el.select();
-  document.execCommand("copy");
+function copyCite(event) {
+  const text = document.getElementById("citeContent").textContent;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target;
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(() => btn.textContent = original, 1500);
+  });
 }
 </script>
 
-<!-- ===================== -->
-<!-- STYLE -->
-<!-- ===================== -->
-<style>
 
-/* ===================== */
-/* CITATION */
-/* ===================== */
 
-.citation-item {
-  display: block;
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
 
-.authors {
-  white-space: normal;
-}
 
-.author {
-  white-space: nowrap;
-}
-
-.paper-icon {
-  margin-right: 0.35rem;
-  opacity: 0.8;
-}
-/* ===================== */
-/* BUTTONS */
-/* ===================== */
-
-.citation-actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.btn-blue {
-  padding: 0.15rem 0.6rem;
-  border: 1.0px solid #0969da;
-  border-radius: 6px;
-  background: #ffffff;   /* <- weißer Hintergrund */
-  color: #0969da;
-  cursor: pointer;
-  font-size: 0.7rem;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.15s ease;
-}
-
-.btn-blue:hover {
-  background: #c2c6cc;   /* leichtes blaues hover-white */
-  color: #0969da;
-}
-
-/* ===================== */
-/* MODAL (STABLE FIX) */
-/* ===================== */
-
-#citeModal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.55);
-  z-index: 2147483647;
-  isolation: isolate;
-}
-
-#citeModal.active {
-  display: flex;
-}
-
-  .cite-box {
-  background: #ffffff;
-  width: 760px;
-  max-width: 92vw;
-  border-radius: 12px;
-  padding: 20px 22px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-  .cite-header {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-#citeBox {
-  width: 100%;
-  height: 320px;
-  padding: 14px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  background: #f6f8fa;
-  border: 1px solid #e1e4e8;
-  border-radius: 8px;
-  resize: none;
-  white-space: pre;
-}
-
-  .cite-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-/* buttons */
-.cite-actions button {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-
-  border-radius: 6px;
-  border: 1px solid #d0d7de;
-
-  background: #ffffff;
-  cursor: pointer;
-
-  transition: background 0.15s ease;
-}
-
-/* hover */
-.cite-actions button:hover {
-  background: #f3f4f6;
-}
-
-/* primary button feel (first button = Copy) */
-.cite-actions button:first-child {
-  border-color: #0969da;
-  color: #0969da;
-}
-
-  
-  
-/*#citeModal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);
-  z-index: 2147483647;
-  isolation: isolate;
-  backdrop-filter: none; *//* wichtig bei Wowchemy */
-}
-
-/*#citeModal.active {
-  display: flex;
-}*/
-
-/*.cite-box {
-  background: white;
-  width: 700px;
-  max-width: 90vw;
-  padding: 1rem;
-  border-radius: 10px;*/
-
-  /* 🔥 FIX: prevents internal overlap rendering bugs */
-   /*display: flex;
-  flex-direction: column;
-  gap: 10px;
-}*/
-
-  /* BOX */
-/*#citeBox {
-  width: 100%;
-  height: 300px;
-  font-family: monospace;*/
-
-  /* 🔥 CRITICAL FIX */
- /* box-sizing: border-box;
-  padding: 10px;
-  line-height: 1.4;
-}*/
-
-/* ACTIONS */
-/*.cite-actions {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}*/
-
-</style>
