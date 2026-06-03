@@ -93,22 +93,12 @@
 .cite-actions button:last-child {
   background: #ddd;
 }
-  
-.pub-abstract {
-  display: none;
-  margin-top: 8px;
-  font-size: 0.85rem;
-  color: #555;
-}
 </style>
 
-
-
-
-
 <div class="pub-card">
+
   <div class="pub-line">
-    
+
     <!-- AUTHORS -->
     {{ with $p.Params.authors }}
       {{- range $i, $a := . -}}
@@ -132,15 +122,8 @@
       {{ . | markdownify }}.
     {{ end }}
 
-    {{ with $p.Params.abstract }}
-      <div class="pub-abstract"> {{ . }} </div>
-    {{ end }}
-
   </div>
-</div>
 
-
-  
   <!-- ACTIONS -->
   <div class="pub-actions">
 
@@ -159,47 +142,6 @@
 
   </div>
 
-<!-- MODAL -->
-<div id="citeModal" class="cite-modal">
-  <div class="cite-box">
-
-    <pre id="citeContent"></pre>
-
-    <div class="cite-actions">
-      <button onclick="copyCite(event)">Copy</button>
-      <button onclick="closeCite()">Close</button>
-    </div>
-
-  </div>
-</div>
-
-<script>
-async function openCite(url) {
-  const res = await fetch(url);
-  const text = await res.text();
-
-  document.getElementById("citeContent").textContent = text;
-  document.getElementById("citeModal").style.display = "flex";
-}
-
-function closeCite() {
-  document.getElementById("citeModal").style.display = "none";
-}
-
-function copyCite(event) {
-  const text = document.getElementById("citeContent").textContent;
-
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = event.target;
-    const original = btn.textContent;
-    btn.textContent = "Copied";
-    setTimeout(() => btn.textContent = original, 1200);
-  });
-}
-</script>
-
-  </div>
-
 </div>
 
 <!-- MODAL -->
@@ -239,30 +181,4 @@ function copyCite(event) {
     setTimeout(() => btn.textContent = original, 1200);
   });
 }
-</script>
-
-  </div>
-
-</div>
-
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".pub-card").forEach(function (card) {
-    card.addEventListener("click", function (e) {
-
-      // ❗ verhindert Trigger bei Buttons/Links
-      if (e.target.closest("a") || e.target.closest("button")) return;
-
-      const abs = card.querySelector(".pub-abstract");
-
-      if (abs) {
-        abs.style.display =
-          (abs.style.display === "block") ? "none" : "block";
-      }
-
-    });
-  });
-});
 </script>
