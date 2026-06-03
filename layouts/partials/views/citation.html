@@ -2,17 +2,7 @@
 
 <style>
 .pub-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.pub-line {
-  color: #444;
+  cursor: pointer;
 }
 
 .pub-title {
@@ -20,122 +10,108 @@
 }
 
 .pub-actions {
-  margin-top: 6px;
+  margin-top: 10px;
   display: flex;
-  gap: 14px;
+  align-items: center;
+  gap: 12px;
 }
 
 .btn {
-  display: inline-block;
+  font-size: 0.75rem;
   padding: 4px 10px;
-  font-size: 0.8rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .btn-doi {
   background: #eee;
-  color: #333;
 }
 
 .btn-cite {
-  background: #525b6e;
+  background: #007acc;
   color: white;
 }
 
-/* Modal */
-.cite-modal {
+/* Abstand zwischen DOI und Cite größer */
+.btn-doi {
+  margin-right: 16px;
+}
+
+.pub-abstract {
   display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  justify-content: center;
-  align-items: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #555;
 }
 
-.cite-box {
-  background: white;
-  padding: 16px;
-  border-radius: 10px;
-  width: 500px;
-  max-width: 90%;
+.pub-card.active .pub-abstract {
+  display: block;
 }
 
-.cite-box pre {
-  background: #f5f5f5;
+/* Cite Box */
+#citeContent {
+  display: none;
+  margin-top: 10px;
+  background: #f7f7f7;
   padding: 10px;
+  font-size: 0.75rem;
   border-radius: 6px;
-  font-size: 0.8rem;
-  overflow-x: auto;
 }
 
 .cite-actions {
-  margin-top: 8px;
-  text-align: right;
+  display: none;
+  margin-top: 5px;
 }
 
 .cite-actions button {
-  margin-left: 6px;
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-.cite-actions button:first-child {
-  background: #525b6e;
-  color: white;
-}
-
-.cite-actions button:last-child {
-  background: #ddd;
+  margin-right: 5px;
 }
 </style>
 
-<div class="pub-card">
+<div class="pub-card" onclick="toggleAbstract(this)">
 
-  <div class="pub-line">
+  <!-- AUTHORS + YEAR + TITLE + JOURNAL -->
+  {{ with $p.Params.authors }}
+    {{- range $i, $a := . -}}
+      {{- if $i }}, {{ end -}}{{ $a }}
+    {{- end -}}.
+  {{ end }}
 
-    <!-- AUTHORS -->
-    {{ with $p.Params.authors }}
-      {{- range $i, $a := . -}}
-        {{- if $i }}, {{ end -}}
-        {{- $a -}}
-      {{- end -}}.
-    {{ end }}
+  {{ with $p.Params.date }}
+    ({{ time.Format "2006" . }}).
+  {{ end }}
 
-    <!-- YEAR -->
-    {{ with $p.Params.date }}
-      ({{ time.Format "2006" . }}).
-    {{ end }}
+  {{ with $p.Title }}
+    <span class="pub-title">{{ . }}</span>.
+  {{ end }}
 
-    <!-- TITLE -->
-    {{ with $p.Title }}
-      <span class="pub-title">{{ . }}</span>.
-    {{ end }}
+  {{ with $p.Params.publication }}
+    {{ . | markdownify }}.
+  {{ end }}
 
-    <!-- JOURNAL -->
-    {{ with $p.Params.publication }}
-      {{ . | markdownify }}.
-    {{ end }}
-
+  <!-- ABSTRACT -->
+  {{ with $p.Params.abstract }}
+  <div class="pub-abstract">
+    <strong>Abstract:</strong> {{ . }}
   </div>
+  {{ end }}
 
   <!-- ACTIONS -->
   <div class="pub-actions">
 
     {{ with $p.Params.doi }}
-    <a class="btn btn-doi" href="https://doi.org/{{ . }}" target="_blank">
+    <a class="btn btn-doi"
+       href="https://doi.org/{{ . }}"
+       target="_blank"
+       onclick="event.stopPropagation()">
       DOI
     </a>
     {{ end }}
 
     {{ with $p.File }}
     <button class="btn btn-cite"
-      onclick="openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
+      onclick="event.stopPropagation(); openCite('{{ printf "%s/cite.bib" .Dir | relURL }}')">
       Cite
     </button>
     {{ end }}
@@ -144,41 +120,38 @@
 
 </div>
 
-<!-- MODAL -->
-<div id="citeModal" class="cite-modal">
-  <div class="cite-box">
+<!-- CITE BOX -->
+<pre id="citeContent"></pre>
 
-    <pre id="citeContent"></pre>
-
-    <div class="cite-actions">
-      <button onclick="copyCite(event)">Copy</button>
-      <button onclick="closeCite()">Close</button>
-    </div>
-
-  </div>
+<div class="cite-actions">
+  <button onclick="copyCite(event)">Copy</button>
+  <button onclick="closeCite()">Close</button>
 </div>
 
 <script>
-async function openCite(url) {
-  const res = await fetch(url);
-  const text = await res.text();
+function toggleAbstract(card) {
+  card.classList.toggle("active");
+}
 
-  document.getElementById("citeContent").textContent = text;
-  document.getElementById("citeModal").style.display = "flex";
+function openCite(url) {
+  fetch(url)
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById("citeContent").innerText = text;
+      document.getElementById("citeContent").style.display = "block";
+      document.querySelector(".cite-actions").style.display = "block";
+    });
+}
+
+function copyCite(e) {
+  e.stopPropagation();
+  const text = document.getElementById("citeContent").innerText;
+  navigator.clipboard.writeText(text);
 }
 
 function closeCite() {
-  document.getElementById("citeModal").style.display = "none";
-}
-
-function copyCite(event) {
-  const text = document.getElementById("citeContent").textContent;
-
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = event.target;
-    const original = btn.textContent;
-    btn.textContent = "Copied";
-    setTimeout(() => btn.textContent = original, 1200);
-  });
+  document.getElementById("citeContent").style.display = "none";
+  document.querySelector(".cite-actions").style.display = "none";
 }
 </script>
+
