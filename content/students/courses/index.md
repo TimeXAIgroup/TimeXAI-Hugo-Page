@@ -9,12 +9,33 @@ _build:
   <h1 class="text-left">Courses</h1>
   <ul class="course-list">
     <li>
-      <strong>Explainable Artificial Intelligence</strong><br/>
-      Master course, Winter Semester 2025/26
+      <strong>
+        <a href="https://moodle.thm.de/course/view.php?id=12525">
+          Explainable Artificial Intelligence
+        </a>
+      </strong>
+      <br />
+      Winter Semester · WK_2631 / MAM375
     </li>
+
     <li>
-      <strong>Time Series Analysis</strong><br/>
-      Bachelor course, Summer Semester 2026
+      <strong>
+        <a href="https://moodle.thm.de/course/view.php?id=12920">
+          AI-Based Image Processing
+        </a>
+      </strong>
+      <br />
+      Summer Semester · WK_2630
+    </li>
+
+    <li>
+      <strong>
+        <a href="https://moodle.thm.de/course/view.php?id=6413">
+          Hauptseminar
+        </a>
+      </strong>
+      <br />
+      Summer Semester · WK_2120
     </li>
   </ul>
   <a class="students-btn" href="/students">← Back to For Students</a>
