@@ -15,9 +15,8 @@ _build:
         </a>
       </strong>
       <br />
-      Winter Semester · WK_2631 / MAM375
+      Master’s course, Winter Semester, WK_2631 / MAM375
     </li>
-
     <li>
       <strong>
         <a href="https://moodle.thm.de/course/view.php?id=12920">
@@ -25,9 +24,8 @@ _build:
         </a>
       </strong>
       <br />
-      Summer Semester · WK_2630
+      Master’s course, Summer Semester, WK_2630
     </li>
-
     <li>
       <strong>
         <a href="https://moodle.thm.de/course/view.php?id=6413">
@@ -35,7 +33,7 @@ _build:
         </a>
       </strong>
       <br />
-      Summer Semester · WK_2120
+      Master’s course, Summer Semester, WK_2120
     </li>
   </ul>
   <a class="students-btn" href="/students">← Back to For Students</a>
