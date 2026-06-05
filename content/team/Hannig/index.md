@@ -19,13 +19,28 @@ _build:
       <p>📞 +49 641 3093436</p>
     </div>
   </div>
-  <!-- LINK -->
-    <div class="team-links">
-    <a href="https://scholar.google.com/citations?user=mUma-k8AAAAJ&hl=de" target="_blank" class="team-link">
+  <!-- ======================
+  ACADEMIC / PROFILE LINKS
+  ====================== -->
+  <div class="team-links">
+    <a href="https://scholar.google.com/citations?user=mUma-k8AAAAJ&hl" target="_blank" class="team-link">
       <img src="/uploads/scholar.jpg" alt="Google Scholar Icon" />
       <span>Google Scholar</span>
     </a>
+    <a href="https://orcid.org/0000-0002-2789-5540" target="_blank" class="team-link">
+      <img src="/uploads/ORCID.png" alt="ORCID Icon" />
+      <span>ORCID</span>
+    </a>
+    <a href="https://www.researchgate.net/profile/Jennifer-Hannig" target="_blank" class="team-link">
+      <img src="/uploads/researchGate.png" alt="ResearchGate Icon" />
+      <span>ResearchGate</span>
+    </a>
+    <a href="https://github.com/aai-research" target="_blank" class="team-link">
+      <img src="/uploads/github.png" alt="GitHub Icon" />
+      <span>GitHub</span>
   </div>
+  
+  
   <!-- BIO -->
   <div class="team-single-content">
     <p class="text-block">
