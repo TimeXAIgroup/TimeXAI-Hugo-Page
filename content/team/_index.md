@@ -60,12 +60,12 @@ _build:
     <article class="text-center">
       <img src="/uploads/human_icon.png" alt="Masuma Fozilatunnesa" />
       <h3 class="text-center">Masuma Fozilatunnesa</h3>
-      <p class="team-role">Master student</p>
+      <p class="team-role">Master's student</p>
     </article>  
     <article class="text-center">
       <img src="/uploads/human_icon.png" alt="Justus Schmidt" />
       <h3 class="text-center">Justus Schmidt</h3>
-      <p class="team-role">Bachelor student</p>
+      <p class="team-role">Bachelor's student</p>
     </article>
     <article class="text-center">
       <img src="/uploads/bijju.jpg" alt="Bijyeta Maharjan" />
