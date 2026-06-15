@@ -21,7 +21,7 @@ _build:
     </article>
     <article class="text-center">
       <a href="/team/gumpfer/">
-        <img src="/uploads/gumpfer.jpg" alt="Dr. Nils Gumpfer" />
+        <img src="/uploads/gumpfer.png" alt="Dr. Nils Gumpfer" />
         <h3 class="text-center">Dr. Nils Gumpfer</h3>
         <p class="team-role">Postdoctoral researcher</p>
       </a>
@@ -66,6 +66,11 @@ _build:
       <img src="/uploads/human_icon.png" alt="Justus Schmidt" />
       <h3 class="text-center">Justus Schmidt</h3>
       <p class="team-role">Bachelor student</p>
+    </article>
+    <article class="text-center">
+      <img src="/uploads/bijju.jpg" alt="Bijyeta Maharjan" />
+      <h3 class="text-center">Bijyeta Maharjan</h3>
+      <p class="team-role">Visiting master's student (Mount Holyoke College, USA)</p>
     </article>
   </section>
 
