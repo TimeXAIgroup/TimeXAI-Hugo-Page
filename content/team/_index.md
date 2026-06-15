@@ -87,17 +87,17 @@ _build:
     <article class="team-member alumni text-center">
       <img src="/uploads/human_icon.png" alt="Yolande Tchuendem Teto" />
       <h3 class="text-center">Yolande Tchuendem Teto</h3>
-      <p class="team-role">Master student</p>
+      <p class="team-role">Master's student</p>
     </article>
     <article class="team-member alumni text-center">
       <img src="/uploads/human_icon.png" alt="Sandra Sommerkorn" />
       <h3 class="text-center">Sandra Sommerkorn</h3>
-      <p class="team-role">Bachelor student</p>
+      <p class="team-role">Bachelor's student</p>
     </article>
   </section>
       <article class="team-member alumni text-center">
       <img src="/uploads/Eckerle.jpg" alt="Dominic Eckerle" />
       <h3 class="text-center">Dominic Eckerle</h3>
-      <p class="team-role">Master student</p>
+      <p class="team-role">Master's student</p>
     </article>
 </section>
