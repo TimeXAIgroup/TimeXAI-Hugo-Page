@@ -70,7 +70,7 @@ _build:
     <article class="text-center">
       <img src="/uploads/bijju.jpg" alt="Bijyeta Maharjan" />
       <h3 class="text-center">Bijyeta Maharjan</h3>
-      <p class="team-role">Visiting master's student (Mount Holyoke College, USA)</p>
+      <p class="team-role">Visiting master's student<br>(Mount Holyoke College, USA)</p>
     </article>
   </section>
 
