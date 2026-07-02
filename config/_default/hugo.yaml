@@ -6,7 +6,7 @@
 # ==============================
 # Site Configuration
 # ==============================
-title: "Applied AI Lab – THM & hessian.AI"  
+title: "Applied AI Lab"  
 # baseURL: 'https://aai-research.github.io/AAI-Hugo-Page/' # deine URL
 baseURL: 'https://aai-lab.org/'
 
