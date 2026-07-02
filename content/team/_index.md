@@ -1,6 +1,6 @@
 ---
 #Team-Page
-title: "Team"
+title: ""
 type: page
 _build:
   list: false
