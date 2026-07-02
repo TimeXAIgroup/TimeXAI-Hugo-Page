@@ -2,7 +2,8 @@ name: Import Publications From Bibtex
 
 on:
   push:
-    branches: ['aai-first-version']
+    #branches: ['aai-first-version']
+    branches: ['main']
     paths:
       - 'publications.bib'
   workflow_dispatch:
