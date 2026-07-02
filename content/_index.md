@@ -27,7 +27,7 @@ sections:
   content:
     text: |
       <div class="hero-home">
-          <img src="uploads/teaser_homepage_aaiLab_small.png" alt="Hero Image"/>
+          <img src="uploads/teaser_homepage_aaiLab_small.png" alt="Applied AI Lab at Technische Hochschule Mittelhessen"/>
       </div>
   design:
     columns: '1'
