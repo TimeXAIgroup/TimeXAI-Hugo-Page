@@ -17,8 +17,8 @@ marketing:
   seo:
     site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
+    org_name: 'Applied AI Lab'
+    description: 'Research group at THM and hessian.AI, led by Prof. Dr. Jennifer Hannig — trustworthy, explainable AI for multimodal data: time series, images, video.'
     #twitter: 'GetResearchDev'
   #analytics:
     #google_analytics: ''
