@@ -21,6 +21,10 @@ _build:
       <img src="/uploads/scholar.jpg" alt="Google Scholar Icon" />
       <span>Google Scholar</span>
     </a>
+    <a href="https://orcid.org/0009-0005-0445-0847" target="_blank" class="team-link">
+      <img src="/uploads/ORCID.png" alt="ORCID Icon" />
+      <span>ORCID</span>
+    </a>
   </div>
 
   <!-- BIO -->
