@@ -1,6 +1,6 @@
 ---
 #Student-Page
-title: ""
+title: "For Students"
 type: page
 _build:
   list: false
