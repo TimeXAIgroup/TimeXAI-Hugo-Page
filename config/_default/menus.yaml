@@ -4,7 +4,7 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Applied AI Lab
+  - name: About
     url: aai
     weight: 10
   - name: Team
