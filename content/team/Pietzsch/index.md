@@ -27,7 +27,7 @@ _build:
   <!-- BIO -->
   <div class="team-single-content">
     <p class="text-block">
-      Sabrina Pietzsch is a research assistant at the Technischen Hochschule Mittelhessen (THM) im Kompetenzzentrum für Informationstechnologie (KITE) . She studied Optical Technology and Image Processing at Darmstadt University of Applied Sciences, graduating with a Master of Science in 2018.
+      HISabrina Pietzsch is a research assistant at the Technischen Hochschule Mittelhessen (THM) im Kompetenzzentrum für Informationstechnologie (KITE) . She studied Optical Technology and Image Processing at Darmstadt University of Applied Sciences, graduating with a Master of Science in 2018.
     </p>
     <p class="text-block">
       Sabrina Pietzsch’s research focuses on image-based recognition and decision support using convolutional neural networks (CNNs) in a medical context. As part of the SINAI-PD project, she focused in particular on the development of an AI-based system for intraoperative decision support in surgery. The aim is to extract relevant features from intraoperative image data and derive clinically useful information for complex or emergency procedures. In the VisSURG-AID project she contributes to building an annotated data infrastructure to support domain-specific AI-driven decision systems.
