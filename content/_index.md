@@ -140,8 +140,8 @@ sections:
         <p class="text-center">
           Discover the opportunities we offer!<br>
           We are always interested in connecting with motivated and talented individuals. 
-          Whether you are a student, researcher or expert, we offer you to collaborate on projects and contribute your expertise.       
-          Join our team and help us to further develop research in the field of applied artificial intelligence!
+          Whether you are a student, researcher, or industry expert, we welcome opportunities to collaborate on projects and exchange expertise.       
+          Work with us and contribute to advancing applied artificial intelligence.
         </p>
 
         <div class="home-open-positions">
