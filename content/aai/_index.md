@@ -1,6 +1,6 @@
 ---
 #AAI-LAB-Page
-title: "About the Lab"
+title: ""
 type: page
 _build:
   list: false
