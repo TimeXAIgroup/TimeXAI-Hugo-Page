@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Contact"
 #Contact-Page
 type: page
 _build:
