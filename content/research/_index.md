@@ -1,6 +1,6 @@
 ---
 #Research/Project-Page
-title: ""
+title: "Research"
 type: page
 _build:
   list: false
