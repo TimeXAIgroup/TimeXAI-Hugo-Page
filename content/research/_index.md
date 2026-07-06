@@ -14,6 +14,7 @@ _build:
       Explore our current and past research projects, including detailed descriptions and sponsors.
     </p>
   </header>
+  <h2 class="text-center">Current Research Projects</h2>
   <section class="research-grid">
     <!-- Projekt 5 -->
     <div class="research-card">
@@ -44,6 +45,11 @@ _build:
       </a>
     </div>
      <!-- Projekt 3 -->
+    </section>
+
+  <h2 class="text-center">Past Research Projects</h2>
+
+  <section class="research-grid">
     <div class="research-card">
       <a href="/research/project_x4neuro/">
         <div class="research-card-inner">
