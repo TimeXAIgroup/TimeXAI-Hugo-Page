@@ -15,7 +15,8 @@ _build:
     Junior Research Group Leader TimeXAI
     </p>
     <div class="team-contact">
-      <p>✉️ jennifer.hannig@kite.thm.de</p>
+      <p>✉️ <a href="mailto:jennifer.hannig@kite.thm.de">
+    jennifer.hannig@kite.thm.de</a></p>
       <p>📞 +49 641 3093436</p>
     </div>
   </div>
