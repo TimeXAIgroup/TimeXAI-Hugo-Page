@@ -46,7 +46,7 @@ _build:
     <p class="text-block">
       Prof. Dr. rer. nat. Jennifer Hannig is a professor at the Department of Mathematics, Natural Sciences and Data Processing (MND) at the Technische Hochschule Mittelhessen – University of Applied Sciences in Friedberg and the Hessian Center for Artificial Intelligence (hessian.AI). In 2024, she received a grant from the Federal Minister of Research, Technology and Space (BMFTR) to establish the junior research group “TimeXAI: Explainable Artificial Intelligence for Time Series”. 
       
-  Jennifer obtained her Bachelor's (2011) and Master’s (2013) Degrees in Bionformatics and completed her Ph.D. in lab of Prof. Ina Koch and Ivan Đikić at the Goethe University Frankfurt.
+  Jennifer obtained her Bachelor's (2011) and Master’s (2013) Degrees in Bioinformatics and completed her Ph.D. in lab of Prof. Ina Koch and Ivan Đikić at the Goethe University Frankfurt.
     </p>
   </div>
 
