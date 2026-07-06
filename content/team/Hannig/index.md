@@ -38,6 +38,7 @@ _build:
     <a href="https://github.com/aai-research" target="_blank" class="team-link">
       <img src="/uploads/github.png" alt="GitHub Icon" />
       <span>GitHub</span>
+    </a>
   </div>
   
   
