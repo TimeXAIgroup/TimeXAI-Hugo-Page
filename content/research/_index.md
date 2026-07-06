@@ -9,9 +9,9 @@ _build:
 <section class="research-page">
 
   <header class="research-header">
-    <h1 class="h1-center">Research Projects</h1>
+    <h1 class="h1-center">Research</h1>
     <p class="text-center">
-      Explore our current and past research projects, including detailed descriptions and sponsors.
+      Explore our research projects, their objectives, partners, and funding.
     </p>
   </header>
   <h2 class="text-center">Current Research Projects</h2>
