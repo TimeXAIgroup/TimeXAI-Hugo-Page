@@ -17,7 +17,7 @@ _build:
     <div class="team-contact">
       <p>✉️ <a href="mailto:jennifer.hannig@kite.thm.de">
     jennifer.hannig@kite.thm.de</a></p>
-      <p>📞 +49 641 3093436</p>
+      <p>📞 <a href="tel:+496413093436">+49 641 3093436</a></p>
     </div>
   </div>
   <!-- ======================
