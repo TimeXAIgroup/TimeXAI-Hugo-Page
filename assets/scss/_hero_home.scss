@@ -191,11 +191,16 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: inherit;
+      color: #3d3e41 !important;
       text-decoration: none;
       transition: transform 0.3s ease;
 
+      &:visited {
+      color: #3d3e41 !important;
+      }
+
       &:hover {
+        color: #3d3e41 !important;
         transform: translateY(-20px);
       }
 
