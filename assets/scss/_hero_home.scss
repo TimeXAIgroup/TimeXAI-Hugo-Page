@@ -206,7 +206,9 @@
 
       img {
         width: 110px;
-        height: 110px;
+        height: auto;
+        max-height: 110px;
+        object-fit: contain;
         margin-bottom: 12px;
       }
 
