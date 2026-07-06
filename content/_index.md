@@ -52,22 +52,26 @@ sections:
         <div class="home-about-icons">
           <div class="care-item">
             <a href="aai/" class="care-inner">
-              <img src="uploads/aai_icon2.png" alt="Applied AI"/>
+              <img src="uploads/aai_icon2.png" alt=""/>
+              <span class="care-label">About Us</span>
             </a>
           </div>
           <div class="care-item">
             <a href="research" class="care-inner">
-               <img src="uploads/project_icon2.png" alt="Projects"/>
+               <img src="uploads/project_icon2.png" alt=""/>
+               <span class="care-label">Projects</span>
             </a>
           </div>
           <div class="care-item">
             <a href="students" class="care-inner">
-              <img src="uploads/teaching_icon2.png" alt="Students"/>
+              <img src="uploads/teaching_icon2.png" alt=""/>
+              <span class="care-label">Teaching</span>
             </a>
           </div>
           <div class="care-item">
             <a href="publication" class="care-inner">
-              <img src="uploads/paper_icon2.png" alt="Publications"/>
+              <img src="uploads/paper_icon2.png" alt=""/>
+              <span class="care-label">Publications</span>
             </a>
           </div>
         </div>
