@@ -11,7 +11,7 @@ _build:
     <img src="/uploads/hannig.jpg" alt="Prof. Dr. Jennifer Hannig" />
     <h1 class="h1-center">Prof. Dr. Jennifer Hannig</h1>
     <p class="team-role-single text-center">
-     Professor of Artificial Intelligence
+     Professor of Artificial Intelligence <br>
     Junior Research Group Leader TimeXAI
     </p>
     <div class="team-contact">
