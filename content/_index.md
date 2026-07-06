@@ -151,17 +151,20 @@ sections:
         <div class="home-open-positions">
           <div class="position-item">
             <a href="https://www.thm.de/site/hochschule/profil/job-und-karriere/aktuelle-stellenangebote.html" target="_blank">
-              <img src="uploads/thm_job_icon.png" alt="THM Jobs"/>
+              <img src="uploads/thm_job_icon.png" alt=""/>
+              <span class="position-label">Job Openings</span>
             </a>         
           </div>
           <div class="position-item">
             <a href="students">
-              <img src="uploads/hiwi_job_icon.png" alt="HiWi Positions"/>
+              <img src="uploads/hiwi_job_icon.png" alt=""/>
+              <span class="position-label">Student Opportunities</span>
             </a>
           </div>
           <div class="position-item">
             <a href="students/theses/">
-              <img src="uploads/thesis_icon.png" alt="Thesis Opportunities"/>
+              <img src="uploads/thesis_icon.png" alt=""/>
+              <span class="position-label">Thesis Topics</span>
             </a>
           </div>
         </div>
