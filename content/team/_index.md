@@ -7,7 +7,7 @@ _build:
 ---
 
 <section class="team-page">
-  <h1 class="h1-center"> Meet the Applied AI Lab Team </h1>
+  <h1 class="h1-center"> Applied AI Lab Team </h1>
   <header class="team-subheader"> </header>
   
 <!-- CLICKABLE MEMBER -->
