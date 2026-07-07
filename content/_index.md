@@ -73,7 +73,7 @@ sections:
   design:
     columns: '1'
     spacing:
-      padding: ['70px', '30px', '70px', '30px']  
+      padding: ['50px', '20px', '50px', '20px']  
 
 # ======================
 # INTRO + ANIMATION ICONS
