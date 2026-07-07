@@ -82,6 +82,47 @@ sections:
       padding: ['80px','30px','80px','30px']
 
 # ======================
+# FEATURED VIDEO
+# ======================
+- block: markdown
+  content:
+    text: |
+      <section class="featured-video">
+        <div class="featured-video__text">
+          <p class="featured-video__eyebrow">Featured Video</p>
+
+          <h2>Making AI Understandable</h2>
+
+          <p>
+            Prof. Dr. Jennifer Hannig explains explainable artificial
+            intelligence and why transparent AI systems are important.
+          </p>
+
+          <a
+            href="https://www.youtube.com/watch?v=OqfVpfbw1-4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch on YouTube →
+          </a>
+        </div>
+
+        <div class="featured-video__player">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/OqfVpfbw1-4"
+            title="Making AI Understandable with Prof. Dr. Jennifer Hannig"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+  design:
+    columns: '1'
+    spacing:
+      padding: ['70px', '30px', '70px', '30px']
+
+
+# ======================
 # PARTNER LOGOS
 # ======================
 - block: markdown
