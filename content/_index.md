@@ -147,28 +147,6 @@ sections:
       padding: ['20px','0','70px','0']
 
 # ======================
-# FEATURED VIDEO
-# ======================
-- block: markdown
-  content:
-    text: |
-      <section class="featured-video">
-      <div class="featured-video__text">
-      <p class="featured-video__eyebrow">Video Podcast</p>
-      <h2>Making AI Understandable</h2>
-      <p>In this video podcast, Prof. Dr. Jennifer Hannig discusses how eXplainable AI makes model decisions more transparent and why trustworthy AI is essential in high-stakes applications.</p>
-      <a class="home-button" href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
-      </div>
-      <div class="featured-video__player">
-      <iframe src="https://www.youtube-nocookie.com/embed/OqfVpfbw1-4" title="Making AI Understandable with Prof. Dr. Jennifer Hannig" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      </section>
-  design:
-    columns: '1'
-    spacing:
-      padding: ['30px', '20px', '40px', '20px']
-
-# ======================
 # SELECTED PROJECTS
 # ======================
 - block: markdown
@@ -252,6 +230,30 @@ sections:
     columns: '1'
     spacing:
       padding: ['65px', '20px', '70px', '20px']
+
+# ======================
+# FEATURED VIDEO
+# ======================
+- block: markdown
+  content:
+    text: |
+      <section class="featured-video">
+      <div class="featured-video__text">
+      <p class="featured-video__eyebrow">Video Podcast</p>
+      <h2>Making AI Understandable</h2>
+      <p>In this video podcast, Prof. Dr. Jennifer Hannig discusses how eXplainable AI makes model decisions more transparent and why trustworthy AI is essential in high-stakes applications.</p>
+      <a class="home-button" href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
+      </div>
+      <div class="featured-video__player">
+      <iframe src="https://www.youtube-nocookie.com/embed/OqfVpfbw1-4" title="Making AI Understandable with Prof. Dr. Jennifer Hannig" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      </section>
+  design:
+    columns: '1'
+    spacing:
+      padding: ['30px', '20px', '40px', '20px']
+
+
 
 # ======================
 # LATEST NEWS
