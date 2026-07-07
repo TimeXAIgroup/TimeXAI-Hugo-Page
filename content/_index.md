@@ -153,84 +153,48 @@ sections:
   content:
     text: |
       <section class="home-projects">
+      <header class="home-projects__header">
+      <p class="home-section-label">Current Research</p>
+      <h2>Selected Projects</h2>
+      </header>
 
-        <header class="home-projects__header">
-          <p class="home-section-label">Current Research</p>
-          <h2>Selected Projects</h2>
-        </header>
+      <div class="home-projects__grid">
 
-        <div class="home-projects__grid">
+      <article class="home-project-card">
+      <div class="home-project-card__image">
+      <img src="/uploads/time_series.jpg" alt="Visualization of time-series data for the TimeXAI project" loading="lazy" decoding="async" />
+      </div>
+      <div class="home-project-card__content">
+      <h3>TimeXAI</h3>
+      <p>We develop and evaluate explainable AI methods for complex time-series classification models.</p>
+      <p class="home-project-card__meta">BMFTR · ExperTeam4KI · 2024–2027</p>
+      <a href="/research/project_timexai/">Explore project →</a>
+      </div>
+      </article>
 
-          <article class="home-project-card">
-            <div class="home-project-card__image">
-              <img
-                src="/uploads/time_series.jpg"
-                alt="Visualization of time-series data for the TimeXAI project"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+      <article class="home-project-card">
+      <div class="home-project-card__image">
+      <img src="/uploads/VisSURG-AID.png" alt="Illustration of visual artificial intelligence for surgical decision support" loading="lazy" decoding="async" />
+      </div>
+      <div class="home-project-card__content">
+      <h3>VisSURG-AID</h3>
+      <p>We investigate transparent visual AI methods for reliable decision support based on surgical video.</p>
+      <p class="home-project-card__meta">FCMH Experimentierräume · 2026</p>
+      <a href="/research/project_vissurg_aid/">Explore project →</a>
+      </div>
+      </article>
 
-            <div class="home-project-card__content">
-              <h3>TimeXAI</h3>
+      </div>
 
-              <p>
-                We develop and evaluate explainable AI methods for
-                complex time-series classification models.
-              </p>
-
-              <p class="home-project-card__meta">
-                BMFTR · ExperTeam4KI · 2024–2027
-              </p>
-
-              <a href="/research/project_timexai/">
-                Explore project →
-              </a>
-            </div>
-          </article>
-
-          <article class="home-project-card">
-            <div class="home-project-card__image">
-              <img
-                src="/uploads/VisSURG-AID.png"
-                alt="Illustration of visual artificial intelligence for surgical decision support"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            <div class="home-project-card__content">
-              <h3>VisSURG-AID</h3>
-
-              <p>
-                We investigate transparent visual AI methods for
-                reliable decision support based on surgical video.
-              </p>
-
-              <p class="home-project-card__meta">
-                FCMH Experimentierräume · 2026
-              </p>
-
-              <a href="/research/project_vissurg_aid/">
-                Explore project →
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <div class="home-projects__all">
-          <a class="home-button" href="/research/">
-            View all research projects
-          </a>
-        </div>
-
+      <div class="home-projects__all">
+      <a class="home-button" href="/research/">View all research projects</a>
+      </div>
       </section>
   design:
     columns: '1'
     spacing:
       padding: ['65px', '20px', '70px', '20px']
-
+  
 # ======================
 # FEATURED VIDEO
 # ======================
