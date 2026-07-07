@@ -12,9 +12,7 @@ sections:
       text: |
         We develop open and interactive research resources that make
         artificial intelligence methods more accessible, transparent,
-        and reproducible.
-
-        This page provides access to software, datasets, web tools,
+        and reproducible. This page provides access to software, datasets, web tools,
         and interactive demonstrations developed by the Applied AI Lab.
     design:
       columns: '1'
