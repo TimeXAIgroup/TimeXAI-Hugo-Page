@@ -16,7 +16,7 @@ main:
     url: research/
     weight: 30
 
-  - name: For Students
+  - name: Students
     url: students/
     weight: 40
 
