@@ -1,0 +1,45 @@
+{{ $item := .item }}
+
+<article class="home-publication-card">
+
+  <p class="home-publication-card__meta">
+    {{ with $item.Params.publication }}
+      {{ . | markdownify | plainify }}
+    {{ end }}
+
+    {{ with $item.Date }}
+      · {{ .Format "2006" }}
+    {{ end }}
+  </p>
+
+  <h3 class="home-publication-card__title">
+    <a href="{{ $item.RelPermalink }}">
+      {{ $item.Title }}
+    </a>
+  </h3>
+
+  {{ with $item.Params.authors }}
+    <p class="home-publication-card__authors">
+      {{ delimit . ", " }}
+    </p>
+  {{ end }}
+
+  <div class="home-publication-card__links">
+
+    <a href="{{ $item.RelPermalink }}">
+      Details →
+    </a>
+
+    {{ with $item.Params.doi }}
+      <a
+        href="https://doi.org/{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DOI ↗
+      </a>
+    {{ end }}
+
+  </div>
+
+</article>
