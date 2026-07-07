@@ -55,8 +55,8 @@ sections:
         </p>
 
         <div class="home-profile__actions">
-          <a class="home-profile__button home-profile__button--primary" href="/research/">Explore our research</a>
-          <a class="home-profile__button home-profile__button--primary" href="/team/">Meet the team</a>
+          <a class="home-profile__button home-profile__button--secondary" href="/research/">Explore our research</a>
+          <a class="home-profile__button home-profile__button--secondary" href="/team/">Meet the team</a>
         </div>
 
       </div>
