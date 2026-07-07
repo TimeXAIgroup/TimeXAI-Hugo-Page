@@ -36,50 +36,107 @@ sections:
     css_class: hero-fullwidth
 
 # ======================
-# INTRO + ANIMATION ICONS
+# SHORT RESEARCH PROFILE + GROUP PHOTO
 # ======================
 - block: markdown
   content:
     text: |
-      <div class="home-intro-icons text-center">
-        <div class="home-intro">        
-          <h1 class="text-center">Applied AI Lab</h1>
-          <p class="text-center">
-            We develop novel methods for trustworthy and explainable AI for time series, images, and video. Our research combines methodological advances in reliable machine learning with challenging interdisciplinary   applications in science, engineering, and healthcare.</p>
-          <p class="home-intro__leadership">
-            The Applied AI Lab is headed by <a href="/team/hannig/"> Prof. Dr. Jennifer Hannig</a>, Professor of Artificial Intelligence at Technische Hochschule Mittelhessen.</p>
-        </div>
-        <div class="home-about-icons">
-          <div class="care-item">
-            <a href="aai/" class="care-inner">
-              <img src="uploads/aai_icon2.png" alt=""/>
-              <span class="care-label">About Us</span>
-            </a>
-          </div>
-          <div class="care-item">
-            <a href="research" class="care-inner">
-               <img src="uploads/project_icon2.png" alt=""/>
-               <span class="care-label">Projects</span>
-            </a>
-          </div>
-          <div class="care-item">
-            <a href="students" class="care-inner">
-              <img src="uploads/teaching_icon2.png" alt=""/>
-              <span class="care-label">Teaching</span>
-            </a>
-          </div>
-          <div class="care-item">
-            <a href="publication" class="care-inner">
-              <img src="uploads/paper_icon2.png" alt=""/>
-              <span class="care-label">Publications</span>
-            </a>
-          </div>
-        </div>
+      <section class="home-profile">
+      <div class="home-profile__content">
+
+      <h1 class="home-profile__title">Applied AI Lab</h1>
+
+      <p class="home-profile__lead">
+        We develop novel methods for trustworthy and explainable AI
+        for time series, images, and video. Our research combines
+        methodological advances in reliable machine learning with
+        challenging interdisciplinary applications in science,
+        engineering, and healthcare.
+      </p>
+
+      <p class="home-profile__leadership">
+        Led by
+        <a href="/team/hannig/">Prof. Dr. Jennifer Hannig</a>
+        at Technische Hochschule Mittelhessen.
+      </p>
+
+      <div class="home-profile__actions">
+        <a
+          class="home-profile__button home-profile__button--primary"
+          href="/research/"
+        >
+          Explore our research
+        </a>
+
+        <a
+          class="home-profile__button home-profile__button--secondary"
+          href="/team/"
+        >
+          Meet the team
+        </a>
       </div>
+
+      </div>
+
+      <div class="home-profile__image">
+      <img
+        src="/uploads/group_photo_2_small.jpg"
+        alt="Members of the Applied AI Lab at Technische Hochschule Mittelhessen"
+        loading="lazy"
+        decoding="async"
+      />
+      </div>
+      </section>
   design:
     columns: '1'
     spacing:
-      padding: ['80px','30px','80px','30px']
+      padding: ['70px', '30px', '70px', '30px']  
+
+# ======================
+# INTRO + ANIMATION ICONS
+# ======================
+#- block: markdown
+#  content:
+#    text: |
+#      <div class="home-intro-icons text-center">
+#        <div class="home-intro">        
+#          <h1 class="text-center">Applied AI Lab</h1>
+#          <p class="text-center">
+#            We develop novel methods for trustworthy and explainable AI for time series, images, and video. Our research combines methodological advances in reliable machine learning with challenging interdisciplinary   applications in science, engineering, and healthcare.</p>
+#          <p class="home-intro__leadership">
+#           The Applied AI Lab is headed by <a href="/team/hannig/"> Prof. Dr. Jennifer Hannig</a>, Professor of Artificial Intelligence at Technische Hochschule Mittelhessen.</p>
+#        </div>
+#        <div class="home-about-icons">
+#          <div class="care-item">
+#            <a href="aai/" class="care-inner">
+#              <img src="uploads/aai_icon2.png" alt=""/>
+#              <span class="care-label">About Us</span>
+#            </a>
+#          </div>
+#          <div class="care-item">
+#            <a href="research" class="care-inner">
+#               <img src="uploads/project_icon2.png" alt=""/>
+#               <span class="care-label">Projects</span>
+#            </a>
+#          </div>
+#          <div class="care-item">
+#            <a href="students" class="care-inner">
+#              <img src="uploads/teaching_icon2.png" alt=""/>
+#              <span class="care-label">Teaching</span>
+#            </a>
+#          </div>
+#          <div class="care-item">
+#            <a href="publication" class="care-inner">
+#              <img src="uploads/paper_icon2.png" alt=""/>
+#              <span class="care-label">Publications</span>
+#            </a>
+#          </div>
+#        </div>
+#      </div>
+#  design:
+#    columns: '1'
+#    spacing:
+#      padding: ['80px','30px','80px','30px']
 
 # ======================
 # PARTNER LOGOS
