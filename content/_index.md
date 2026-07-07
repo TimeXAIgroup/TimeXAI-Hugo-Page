@@ -116,7 +116,7 @@ sections:
       <div class="featured-video__text">
       <p class="featured-video__eyebrow">Video Podcast</p>
       <h2>Making AI Understandable</h2>
-      <p>A video podcast featuring Prof. Dr. Jennifer Hannig on explainable AI, transparent model decisions, and the importance of trustworthy AI in high-stakes applications.</p>
+      <p>In this video podcast, Prof. Dr. Jennifer Hannig discusses how eXplainable AI makes model decisions more transparent and why trustworthy AI is essential in high-stakes applications.</p>
       <a href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
       </div>
       <div class="featured-video__player">
