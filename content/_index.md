@@ -72,6 +72,7 @@ sections:
       </section>
   design:
     columns: '1'
+    css_class: home-profile-section
     spacing:
       padding: ['50px', '20px', '50px', '20px']  
 
@@ -143,6 +144,7 @@ sections:
       </div>
   design:
     columns: '1'
+    css_class: home-partners-section
     spacing:
       padding: ['20px','0','70px','0']
 
@@ -192,6 +194,7 @@ sections:
       </section>
   design:
     columns: '1'
+    css_class: home-projects-section
     spacing:
       padding: ['65px', '20px', '70px', '20px']
 
@@ -242,6 +245,7 @@ sections:
       </section>
   design:
     columns: '1'
+    css_class: home-video-section
     spacing:
       padding: ['30px', '20px', '40px', '20px']
 
@@ -312,6 +316,7 @@ sections:
       </div>
   design:
     columns: '1'
+    css_class: home-open-positions-section
     spacing:
       padding: ['60px','30px','60px','30px']
 ---
