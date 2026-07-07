@@ -30,7 +30,7 @@ sections:
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
-        <img src="/uploads/resources/cnn-3d-demo.jpg" alt="Interactive 3D visualization of a one-dimensional convolutional neural network" loading="lazy" decoding="async" />
+        <img src="/static/uploads/cnn-3d-demo.png" alt="Interactive 3D visualization of a one-dimensional convolutional neural network" loading="lazy" decoding="async" />
         </div>
 
         <div class="research-resource-card__body">
@@ -55,7 +55,7 @@ sections:
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
-        <img src="/uploads/resources/eduxai.jpg" alt="EduXAI interactive web application" loading="lazy" decoding="async" />
+        <img src="/static/uploads/eduxai.png" alt="EduXAI interactive web application" loading="lazy" decoding="async" />
         </div>
 
         <div class="research-resource-card__body">
