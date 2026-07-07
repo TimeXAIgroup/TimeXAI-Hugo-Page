@@ -2,11 +2,11 @@
 
   <div class="home-publication-card__links">
 
-    <a href="{{ $publication.RelPermalink }}">
+    <a href="{{ $item.RelPermalink }}">
       Details →
     </a>
 
-    {{ with $publication.Params.doi }}
+    {{ with $item.Params.doi }}
       <a
         href="https://doi.org/{{ . }}"
         target="_blank"
