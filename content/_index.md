@@ -47,7 +47,7 @@ sections:
           <p class="text-center">
             We develop novel methods for trustworthy and explainable AI for time series, images, and video. Our research combines methodological advances in reliable machine learning with challenging interdisciplinary   applications in science, engineering, and healthcare.</p>
           <p class="home-intro__leadership">
-            The Applied AI Lab is headed by <a href="/team/hannig/"> Prof. Dr. Jennifer Hannig </a>, Professor of Artificial Intelligence at Technische Hochschule Mittelhessen.</p>
+            The Applied AI Lab is headed by <a href="/team/hannig/"> Prof. Dr. Jennifer Hannig</a>, Professor of Artificial Intelligence at Technische Hochschule Mittelhessen.</p>
         </div>
         <div class="home-about-icons">
           <div class="care-item">
