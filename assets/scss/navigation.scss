@@ -1,4 +1,33 @@
 /* Navigation Hauptmenü */
+
+/* Logo und Titel links oben */
+.navbar-brand {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.55rem;
+
+  color: #222222 !important;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Kleines AAI-Logo vor dem Titel */
+.navbar-brand::before {
+  content: "";
+  display: block;
+
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+
+  background-image: url("/uploads/aai_icon2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 /* Alle Reiter */
 .nav-link {
   text-decoration: none;
@@ -29,6 +58,16 @@
 
 /* Mobile-Ansicht */
 @media (max-width: 768px) {
+  .navbar-brand {
+    gap: 0.4rem;
+    font-size: 1.1rem;
+  }
+
+  .navbar-brand::before {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
   /* Navigation Container */
   .navbar {
     flex-direction: column;   /* Reiter untereinander */
