@@ -1,37 +1,3 @@
-{{ $publication := .item }}
-
-<article class="home-publication-card">
-
-  <p class="home-publication-card__meta">
-    {{ with $publication.Params.publication }}
-      {{ . | markdownify | plainify }}
-    {{ else }}
-      Publication
-    {{ end }}
-
-    {{ with $publication.Date }}
-      · {{ .Format "2006" }}
-    {{ end }}
-  </p>
-
-  <h3 class="home-publication-card__title">
-    <a href="{{ $publication.RelPermalink }}">
-      {{ $publication.Title }}
-    </a>
-  </h3>
-
-  {{ with $publication.Params.authors }}
-    {{ $authors := . }}
-
-    <p class="home-publication-card__authors">
-      {{ range $index, $author := first 3 $authors }}
-        {{ if $index }}, {{ end }}{{ $author }}
-      {{ end }}
-
-      {{ if gt (len $authors) 3 }}
-        et al.
-      {{ end }}
-    </p>
   {{ end }}
 
   <div class="home-publication-card__links">
