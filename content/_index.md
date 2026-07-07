@@ -44,26 +44,20 @@ sections:
       <section class="home-profile">
       <div class="home-profile__content">
 
-      <h1 class="home-profile__title">Applied AI Lab</h1>
+        <h1 class="home-profile__title">Applied AI Lab</h1>
 
-      <p class="home-profile__lead">
-        We develop novel methods for trustworthy and explainable AI
-        for time series, images, and video. Our research combines
-        methodological advances in reliable machine learning with
-        challenging interdisciplinary applications in science,
-        engineering, and healthcare.
-      </p>
+        <p class="home-profile__lead">
+          We develop novel methods for trustworthy and explainable AI for time series, images, and video. Our research combines methodological advances in reliable machine learning with challenging interdisciplinary applications in science, engineering, and healthcare.
+        </p>
 
-      <p class="home-profile__leadership">
-        Led by
-        <a href="/team/hannig/">Prof. Dr. Jennifer Hannig</a>
-        at Technische Hochschule Mittelhessen.
-      </p>
+        <p class="home-profile__leadership">
+          Led by <a href="/team/hannig/">Prof. Dr. Jennifer Hannig</a> at Technische Hochschule Mittelhessen and hessian.AI.
+        </p>
 
-     <div class="home-profile__actions">
-      <a class="home-profile__button home-profile__button--primary" href="/research/">Explore our research</a>
-      <a class="home-profile__button home-profile__button--secondary" href="/team/">Meet the team</a>
-    </div>
+        <div class="home-profile__actions">
+          <a class="home-profile__button home-profile__button--primary" href="/research/">Explore our research</a>
+          <a class="home-profile__button home-profile__button--secondary" href="/team/">Meet the team</a>
+        </div>
 
       </div>
 
