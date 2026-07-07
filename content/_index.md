@@ -194,6 +194,30 @@ sections:
     columns: '1'
     spacing:
       padding: ['65px', '20px', '70px', '20px']
+
+# ======================
+# RECENT PUBLICATIONS
+# ======================
+- block: collection
+  content:
+    text: |
+      <div class="home-publications__header">
+      <div>
+      <p class="home-section-label">Publications</p>
+      <h2>Recent Research Outputs</h2>
+      </div>
+      <a class="home-button" href="/publication/">View all publications</a>
+      </div>
+  filters:
+    folders:
+      - publication
+    order: desc
+    limit: 3
+  design:
+    view: home-publication
+    columns: '3'
+    spacing:
+      padding: ['60px', '20px', '70px', '20px']
   
 # ======================
 # FEATURED VIDEO
