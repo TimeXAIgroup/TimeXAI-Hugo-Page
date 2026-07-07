@@ -129,24 +129,24 @@ sections:
   content:
     text: |
       <div class="hero-partner-logos text-center">
-        <a href="aai/" target="_blank">
-          <img src="uploads/aai_lab.png" alt="Applied AI Lab"/>
-        </a>
-        <a href="https://www.thm.de/kompetenzzentren/kite/profil.html" target="_blank">
-         <img src="uploads/kite_logo.png" alt="KITE"/>
-        </a>
-        <a href="https://www.thm.de" target="_blank">
-          <img src="uploads/THM_logo.png" alt="THM"/>
-        </a>
-        <a href="https://hessian.ai" target="_blank">
-          <img src="uploads/HessenAi_logo.png" alt="HessenAI"/>
-        </a>
+      <a href="/aai/" aria-label="Applied AI Lab">
+      <img src="/uploads/aai_lab.png" alt="Applied AI Lab logo" />
+      </a>
+      <a href="https://www.thm.de/kompetenzzentren/kite/profil.html" target="_blank" rel="noopener noreferrer" aria-label="KITE website – opens in a new tab">
+      <img src="/uploads/kite_logo.png" alt="KITE logo" />
+      </a>
+      <a href="https://www.thm.de" target="_blank" rel="noopener noreferrer" aria-label="Technische Hochschule Mittelhessen website – opens in a new tab">
+      <img src="/uploads/THM_logo.png" alt="Technische Hochschule Mittelhessen logo" />
+      </a>
+      <a href="https://hessian.ai" target="_blank" rel="noopener noreferrer" aria-label="hessian.AI website – opens in a new tab">
+      <img src="/uploads/HessenAi_logo.png" alt="hessian.AI logo" />
+      </a>
       </div>
   design:
     columns: '1'
     css_class: home-partners-section
     spacing:
-      padding: ['20px','0','70px','0']
+      padding: ['20px', '0', '70px', '0']
 
 # ======================
 # SELECTED PROJECTS
