@@ -202,20 +202,24 @@ sections:
   content:
     text: |
       <div class="home-publications__header">
-      <div>
-      <p class="home-section-label">Publications</p>
+      <p class="home-section-label">Selected Publications</p>
       <h2>Recent Research Outputs</h2>
       </div>
-      <a class="home-button" href="/publication/">View all publications</a>
-      </div>
-  filters:
-    folders:
-      - publication
-    order: desc
-    limit: 3
+    filters:
+      folders:
+        - publication
+      exclude_future: true
+    count: 3
+    sort_by: Date
+    sort_ascending: false
+    archive:
+      enable: true
+      text: View all publications
+      link: /publication/
   design:
     view: home-publication
     columns: '3'
+    css_class: home-publications-section
     spacing:
       padding: ['60px', '20px', '70px', '20px']
   
