@@ -1,0 +1,156 @@
+// ==========================================================================
+// RESOURCES PAGE
+// ==========================================================================
+
+.resources-intro-section {
+  background: #f5f5f5;
+}
+
+.resources-intro-section .col-12 {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.resources-intro-section h2 {
+  margin: 0 0 1.25rem;
+
+  color: #303033;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.resources-intro-section p {
+  max-width: 760px;
+  margin: 0;
+
+  color: #3d3e41;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.resources-grid-section {
+  background: #ffffff;
+}
+
+.research-resources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.research-resource-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  min-height: 300px;
+  padding: 1.75rem;
+
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid rgba(88, 13, 173, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.research-resource-card:hover {
+  border-color: rgba(88, 13, 173, 0.28);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.11);
+  transform: translateY(-3px);
+}
+
+.research-resource-card__type {
+  margin: 0 0 0.75rem;
+
+  color: #580dad;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.research-resource-card h2 {
+  margin: 0 0 1rem;
+
+  color: #303033;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  transition: color 0.2s ease;
+}
+
+.research-resource-card:hover h2 {
+  color: #580dad;
+}
+
+.research-resource-card > p:not(.research-resource-card__type) {
+  margin: 0 0 1.25rem;
+
+  color: #3d3e41;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.research-resource-card__meta {
+  color: #67676f !important;
+  font-size: 0.9rem !important;
+}
+
+.research-resource-card__meta a {
+  color: #580dad;
+  font-weight: 600;
+}
+
+.research-resource-card__link {
+  margin-top: auto;
+
+  color: #580dad;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.research-resource-card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.research-resource-card__link:focus-visible {
+  outline: 3px solid #80ba27;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+@media (max-width: 800px) {
+  .research-resources {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .resources-intro-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .research-resource-card {
+    min-height: 0;
+    padding: 1.25rem;
+  }
+
+  .research-resource-card h2 {
+    font-size: 1.2rem;
+  }
+}
