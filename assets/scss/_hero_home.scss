@@ -233,7 +233,11 @@
   margin-top: 1.75rem;
 }
 
-.home-profile__button {
+// ==========================================================================
+// SHARED HOME PAGE BUTTON
+// ==========================================================================
+
+.home-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -241,25 +245,37 @@
   min-height: 44px;
   padding: 0.65rem 1rem;
 
+  box-sizing: border-box;
   border: 2px solid #580dad;
   border-radius: 8px;
 
-  background: #580dad;
-  color: #ffffff;
+  background: #ffffff;
+  color: #580dad !important;
 
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.2;
-  text-decoration: none;
+  text-align: center;
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.home-profile__button:hover {
-  background: #430982;
-  border-color: #430982;
-  color: #ffffff;
+.home-button:visited {
+  color: #580dad !important;
 }
 
-.home-profile__button:focus-visible {
+.home-button:hover {
+  background: #580dad;
+  border-color: #580dad;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.home-button:focus-visible {
   outline: 3px solid #80ba27;
   outline-offset: 4px;
 }
@@ -340,9 +356,8 @@
     margin-top: 1.5rem;
   }
 
-  .home-profile__button {
-    width: 100%;
-    box-sizing: border-box;
+  .home-profile__actions .home-button {
+  width: 100%;
   }
 
   .home-profile__image {
@@ -634,32 +649,6 @@
   hyphens: none;
 }
 
-.featured-video__text a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 44px;
-  padding: 0.65rem 1rem;
-
-  border: 2px solid #580dad;
-  border-radius: 8px;
-
-  color: #580dad;
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.featured-video__text a:hover {
-  background: #580dad;
-  color: #ffffff;
-}
-
-.featured-video__text a:focus-visible {
-  outline: 3px solid #80ba27;
-  outline-offset: 4px;
-}
 
 .featured-video__player {
   position: relative;
