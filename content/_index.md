@@ -114,10 +114,10 @@ sections:
     text: |
       <section class="featured-video">
       <div class="featured-video__text">
-      <p class="featured-video__eyebrow">Featured Video</p>
+      <p class="featured-video__eyebrow">Video Podcast</p>
       <h2>Making AI Understandable</h2>
-      <p>Prof. Dr. Jennifer Hannig explains explainable artificial intelligence and why transparent AI systems are important.</p>
-      <a href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch on YouTube →</a>
+      <p>A video podcast featuring Prof. Dr. Jennifer Hannig on explainable AI, transparent model decisions, and the importance of trustworthy AI in high-stakes applications.</p>
+      <a href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
       </div>
       <div class="featured-video__player">
       <iframe src="https://www.youtube-nocookie.com/embed/OqfVpfbw1-4" title="Making AI Understandable with Prof. Dr. Jennifer Hannig" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
