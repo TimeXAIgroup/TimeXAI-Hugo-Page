@@ -54,10 +54,10 @@ sections:
           Led by <a href="/team/hannig/">Prof. Dr. Jennifer Hannig</a> at Technische Hochschule Mittelhessen and hessian.AI.
         </p>
 
-        <div class="home-profile__actions">
-          <a class="home-profile__button home-profile__button--secondary" href="/research/">Explore our research</a>
-          <a class="home-profile__button home-profile__button--secondary" href="/team/">Meet the team</a>
-        </div>
+       <div class="home-profile__actions">
+        <a class="home-button" href="/research/">Explore our research</a>
+        <a class="home-button" href="/team/">Meet the team</a>
+      </div>
 
       </div>
 
@@ -157,7 +157,7 @@ sections:
       <p class="featured-video__eyebrow">Video Podcast</p>
       <h2>Making AI Understandable</h2>
       <p>In this video podcast, Prof. Dr. Jennifer Hannig discusses how eXplainable AI makes model decisions more transparent and why trustworthy AI is essential in high-stakes applications.</p>
-      <a href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
+      <a class="home-button" href="https://www.youtube.com/watch?v=OqfVpfbw1-4" target="_blank" rel="noopener noreferrer">Watch the video podcast →</a>
       </div>
       <div class="featured-video__player">
       <iframe src="https://www.youtube-nocookie.com/embed/OqfVpfbw1-4" title="Making AI Understandable with Prof. Dr. Jennifer Hannig" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
