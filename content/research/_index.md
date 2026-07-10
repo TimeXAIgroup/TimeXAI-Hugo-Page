@@ -1,5 +1,4 @@
 ---
-#Research/Project-Page
 title: ""
 type: page
 _build:
@@ -7,12 +6,23 @@ _build:
 ---
 
 <section class="research-page">
+  <header class="research-hero">
+    <p class="research-eyebrow">Research</p>
 
-  <header class="research-header">
-    <h1 class="h1-center">Research</h1>
-    <p class="text-center">
-      Explore our research projects, their objectives, partners, and funding.
+    <h1>Research</h1>
+
+    <p class="research-lead">
+      Our research focuses on trustworthy and explainable AI methods for time
+      series, images, and video. We translate these methods into high-impact
+      applications in healthcare and engineering.
     </p>
+
+    <div class="research-topics">
+      <span>Explainable AI</span>
+      <span>Time Series</span>
+      <span>Computer Vision</span>
+      <span>Clinical Decision Support</span>
+    </div>
   </header>
   <h2 class="text-center">Current Research Projects</h2>
   <section class="research-grid">
