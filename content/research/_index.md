@@ -5,26 +5,13 @@ _build:
   list: false
 ---
 
-<section class="research-page">
-  <header class="research-hero">
-    <p class="research-eyebrow">Research</p>
+# Research
 
-    <h1>Research</h1>
+Our research focuses on trustworthy and explainable AI methods for time series, images, and video. We translate these methods into high-impact applications in healthcare and engineering.
 
-    <p class="research-lead">
-      Our research focuses on trustworthy and explainable AI methods for time
-      series, images, and video. We translate these methods into high-impact
-      applications in healthcare and engineering.
-    </p>
+**Explainable AI** · **Time Series** · **Computer Vision** · **Clinical Decision Support**
 
-    <div class="research-topics">
-      <span>Explainable AI</span>
-      <span>Time Series</span>
-      <span>Computer Vision</span>
-      <span>Clinical Decision Support</span>
-    </div>
-  </header>
-  <h2 class="text-center">Current Research Projects</h2>
+<h2 class="text-center">Current Research Projects</h2>
   <section class="research-grid">
     <!-- Projekt 5 -->
     <div class="research-card">
