@@ -35,7 +35,7 @@ sections:
         </div>
 
         <div class="research-resource-card__body">
-        <p class="research-resource-card__type">Evaluation Framewor</p>
+        <p class="research-resource-card__type">Evaluation Framework</p>
         <h2>XAI4TSC</h2>
 
         <p>
