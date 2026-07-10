@@ -28,9 +28,9 @@ sections:
       text: |
         <div class="research-resources">
 
-        # ======================
-        # card 3
-        # ======================
+  # ======================
+  # card 3
+  # ======================
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
@@ -58,9 +58,9 @@ sections:
         </article>
     
   
-        # ======================
-        # card 2
-        # ======================
+# ======================
+# card 2
+# ======================
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
@@ -87,9 +87,9 @@ sections:
         </div>
         </article>
 
-        # ======================
-        # card 1
-        # ======================
+  # ======================
+  # card 1
+  # ======================
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
