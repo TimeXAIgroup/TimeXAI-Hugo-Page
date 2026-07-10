@@ -28,9 +28,6 @@ sections:
       text: |
         <div class="research-resources">
 
-  # ======================
-  # card 3
-  # ======================
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
@@ -43,7 +40,7 @@ sections:
 
         <p>
         Evaluate explainable AI methods for time series classification
-        in an end-to-end workflow—from dataset selection and model
+        in an end-to-end workflow - from dataset selection and model
         training to explanation generation and evaluation.
         </p>
 
@@ -58,9 +55,7 @@ sections:
         </article>
     
   
-# ======================
-# card 2
-# ======================
+
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
@@ -87,9 +82,7 @@ sections:
         </div>
         </article>
 
-  # ======================
-  # card 1
-  # ======================
+
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
