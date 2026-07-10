@@ -28,6 +28,56 @@ sections:
       text: |
         <div class="research-resources">
 
+        # ======================
+        # card 3
+        # ======================
+    
+<article class="research-resource-card">
+  <div class="research-resource-card__image">
+    <img
+      src="/uploads/XAI4TSC.png"
+      alt="Overview of the XAI4TSC evaluation framework"
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+
+  <div class="research-resource-card__body">
+    <p class="research-resource-card__type">Evaluation Framework</p>
+
+    <h2>XAI4TSC</h2>
+
+    <p>
+      Evaluate explainable AI methods for time series classification
+      in an end-to-end workflow—from dataset selection and model
+      training to explanation generation and evaluation.
+    </p>
+
+    <p>
+      Use XAI4TSC as a Python package or run reproducible experiments
+      from configuration files without writing framework-specific code.
+    </p>
+
+    <p class="research-resource-card__meta">
+      Related project:
+      <a href="/research/project_timexai/">TimeXAI</a>
+    </p>
+
+    <a
+      class="research-resource-card__link"
+      href="https://github.com/TimeXAIgroup/XAI4TSC"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Open framework ↗
+    </a>
+  </div>
+</article>
+    
+        # ======================
+        # card 2
+        # ======================
+
         <article class="research-resource-card">
         <div class="research-resource-card__image">
         <img src="/uploads/cnn-3d-demo.png" alt="Interactive 3D visualization of a one-dimensional convolutional neural network" loading="lazy" decoding="async" />
@@ -52,6 +102,10 @@ sections:
         </a>
         </div>
         </article>
+
+        # ======================
+        # card 1
+        # ======================
 
         <article class="research-resource-card">
         <div class="research-resource-card__image">
