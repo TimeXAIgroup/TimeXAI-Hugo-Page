@@ -8,6 +8,12 @@ on:
   push:
     #branches: ["aai-first-version"]
     branches: ["main"]
+  # Also deploy after the publication import runs, so the folders it
+  # auto-commits get built. That bot commit uses GITHUB_TOKEN and cannot
+  # trigger `push` above, so we chain off the import workflow instead.
+  workflow_run:
+    workflows: ["Import Publications From Bibtex"]
+    types: [completed]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
@@ -24,7 +30,10 @@ concurrency:
 jobs:
   # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
+    # Skip when triggered by a failed/cancelled import run; deploy only on success.
+    if: >-
+      github.repository_owner != 'HugoBlox' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
