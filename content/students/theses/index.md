@@ -13,7 +13,7 @@ _build:
     We offer Bachelor’s and Master’s thesis topics in explainable AI, time series analysis, and medical data science, as well as HiWi positions.<br>
 Available openings are listed below. <br>
       <br>
-If you do not find a matching topic, we also welcome unsolicited applications. Please refer to Prof. Dr. Hannig. </p>
+If you do not find a matching topic, we also welcome unsolicited applications. Please refer to Prof. Dr. Hannig.  </p>
   </header>
   <section class="theses-list">
     <!-- Workflow -->
