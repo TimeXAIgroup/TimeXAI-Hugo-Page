@@ -8,12 +8,12 @@ authors:
 - Christin Seifert
 - Jennifer Hannig
 date: '2026-01-01'
-publishDate: '2026-08-26T06:57:25.982146Z'
+publishDate: '2026-08-27T08:07:43.551788Z'
 publication_types:
-- manuscript
+- article-journal
+publication: '*arXiv*'
+doi: 10.48550/arXiv.2608.21449
 links:
-- name: arXiv
-  url: https://arxiv.org/abs/2608.21449
 - name: URL
   url: https://arxiv.org/abs/2608.21449
 ---

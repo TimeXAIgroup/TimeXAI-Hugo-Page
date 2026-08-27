@@ -12,7 +12,7 @@ authors:
 - Martin-Leo Hansmann
 - Ina Koch
 date: '2020-01-01'
-publishDate: '2026-06-05T08:27:32.163763Z'
+publishDate: '2026-08-27T08:07:43.698158Z'
 publication_types:
 - article-journal
 publication: '*PLOS Computational Biology*'

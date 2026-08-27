@@ -7,7 +7,7 @@ authors:
 - Till Keller
 - Neil Urquhart
 date: '2021-08-01'
-publishDate: '2026-06-05T08:27:32.139199Z'
+publishDate: '2026-08-27T08:07:43.672910Z'
 publication_types:
 - article-journal
 publication: '*Cognitive Systems Research*'

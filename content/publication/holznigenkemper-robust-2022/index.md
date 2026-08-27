@@ -7,7 +7,7 @@ authors:
 - Bernhard Seeger
 - Michael Guckert
 date: '2022-05-01'
-publishDate: '2026-06-05T08:27:32.083127Z'
+publishDate: '2026-08-27T08:07:43.616204Z'
 publication_types:
 - article-journal
 publication: '*International Journal of Modelling and Simulation*'

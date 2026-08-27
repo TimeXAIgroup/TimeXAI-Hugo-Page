@@ -15,7 +15,7 @@ authors:
 - Stephen Marsh
 - Tim Weber
 date: '2023-12-01'
-publishDate: '2026-06-05T08:27:32.064289Z'
+publishDate: '2026-08-27T08:07:43.597156Z'
 publication_types:
 - article-journal
 publication: '*IEEE Technology and Society Magazine*'

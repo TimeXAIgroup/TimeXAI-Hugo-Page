@@ -11,7 +11,7 @@ authors:
 - Till Keller
 - Jeremy Pitt
 date: '2022-03-01'
-publishDate: '2026-06-05T08:27:32.089806Z'
+publishDate: '2026-08-27T08:07:43.622442Z'
 publication_types:
 - article-journal
 publication: '*Frontiers in Digital Health*'

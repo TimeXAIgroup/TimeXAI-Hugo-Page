@@ -12,7 +12,7 @@ authors:
 - Till Keller
 - Michael Guckert
 date: '2021-09-01'
-publishDate: '2026-06-05T08:27:32.126709Z'
+publishDate: '2026-08-27T08:07:43.660317Z'
 publication_types:
 - paper-conference
 publication: '*2021 Computing in Cardiology (CinC)*'

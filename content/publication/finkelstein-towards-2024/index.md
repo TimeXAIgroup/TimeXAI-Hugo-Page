@@ -8,7 +8,7 @@ authors:
 - Michael Guckert
 - Jennifer Hannig
 date: '2024-01-01'
-publishDate: '2026-06-05T08:27:32.058013Z'
+publishDate: '2026-08-27T08:07:43.590974Z'
 publication_types:
 - chapter
 publication: '*Artificial Intelligence in Medicine*'

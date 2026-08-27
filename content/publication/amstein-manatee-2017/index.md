@@ -8,7 +8,7 @@ authors:
 - Ivan Dikic
 - Ina Koch
 date: '2017-12-01'
-publishDate: '2026-06-05T08:27:32.176132Z'
+publishDate: '2026-08-27T08:07:43.710547Z'
 publication_types:
 - article-journal
 publication: '*BMC Systems Biology*'

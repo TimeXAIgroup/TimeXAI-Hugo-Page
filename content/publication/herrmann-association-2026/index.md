@@ -14,7 +14,7 @@ authors:
 - Michael Guckert
 - Birgit Assmus
 date: '2026-03-01'
-publishDate: '2026-07-06T11:30:36.756341Z'
+publishDate: '2026-08-27T08:07:43.584566Z'
 publication_types:
 - article-journal
 publication: '*Clinical Research in Cardiology*'

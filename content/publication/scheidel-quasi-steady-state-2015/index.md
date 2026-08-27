@@ -7,7 +7,7 @@ authors:
 - Jörg Ackermann
 - Ina Koch
 date: '2015-12-01'
-publishDate: '2026-06-05T08:27:32.188318Z'
+publishDate: '2026-08-27T08:07:43.722706Z'
 publication_types:
 - article-journal
 publication: '*Metabolites*'

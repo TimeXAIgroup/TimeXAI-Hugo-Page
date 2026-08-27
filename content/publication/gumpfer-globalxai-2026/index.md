@@ -8,7 +8,7 @@ authors:
 - Birgit Aßmus
 - Jennifer Hannig
 date: '2026-01-01'
-publishDate: '2026-08-03T09:14:23.549376Z'
+publishDate: '2026-08-27T08:07:43.566673Z'
 publication_types:
 - article-journal
 publication: '*arXiv*'

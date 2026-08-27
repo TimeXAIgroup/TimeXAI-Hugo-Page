@@ -1,5 +1,5 @@
 ---
-title: 'isiKnock: textitin silico knockouts in signaling pathways'
+title: 'isiKnock: in silico knockouts in signaling pathways'
 authors:
 - Jennifer Hannig
 - Heiko Giese
@@ -8,7 +8,7 @@ authors:
 - Jörg Ackermann
 - Ina Koch
 date: '2019-03-01'
-publishDate: '2026-06-05T08:27:32.170042Z'
+publishDate: '2026-08-27T08:07:43.704499Z'
 publication_types:
 - article-journal
 publication: '*Bioinformatics*'

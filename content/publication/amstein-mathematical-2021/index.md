@@ -9,7 +9,7 @@ authors:
 - Simone Fulda
 - Ina Koch
 date: '2021-11-01'
-publishDate: '2026-06-05T08:27:32.096008Z'
+publishDate: '2026-08-27T08:07:43.628663Z'
 publication_types:
 - manuscript
 publication: '*Systems Biology*'

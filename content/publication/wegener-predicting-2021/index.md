@@ -13,7 +13,7 @@ authors:
 - M Guckert
 - T Keller
 date: '2021-10-01'
-publishDate: '2026-06-05T08:27:32.108167Z'
+publishDate: '2026-08-27T08:07:43.641146Z'
 publication_types:
 - article-journal
 publication: '*European Heart Journal*'

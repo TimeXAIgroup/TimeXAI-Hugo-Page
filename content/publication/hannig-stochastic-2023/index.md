@@ -1,6 +1,5 @@
 ---
-title: Stochastic modeling of the dynamics of textitSalmonella infection of epithelial
-  cells
+title: Stochastic modeling of the dynamics of Salmonella infection of epithelial cells
 authors:
 - Jennifer Hannig
 - Alireza Beygi
@@ -10,10 +9,10 @@ authors:
 - Ivan Ðikić
 - Ina Koch
 date: '2023-04-01'
-publishDate: '2026-06-05T08:27:32.070655Z'
+publishDate: '2026-08-27T08:07:43.603547Z'
 publication_types:
 - manuscript
-publication: '*Systems Biology*'
+publication: '*bioRxiv*'
 doi: 10.1101/2023.04.02.535247
 links:
 - name: URL

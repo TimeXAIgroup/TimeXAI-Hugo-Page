@@ -7,7 +7,7 @@ authors:
 - Till Keller
 - Michael Guckert
 date: '2021-07-01'
-publishDate: '2026-06-05T08:27:32.145306Z'
+publishDate: '2026-08-27T08:07:43.679050Z'
 publication_types:
 - article-journal
 publication: '*Biological Chemistry*'
