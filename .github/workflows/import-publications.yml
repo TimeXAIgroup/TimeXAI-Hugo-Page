@@ -51,7 +51,7 @@ jobs:
 
       - name: Run Academic import
         run: |
-          academic import publications.bib content/publication/ --compact --verbose
+          academic import publications.bib content/publication/ --compact --overwrite --verbose
 
       - name: Fix author field name
         run: |
