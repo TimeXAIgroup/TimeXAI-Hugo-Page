@@ -58,7 +58,7 @@ _build:
 
   <section class="team-list">
     <article class="text-center">
-      <img src="/uploads/Fozilatunnesa_Masuma_Photo.jpg" alt="Masuma Fozilatunnesa" />
+      <img src="/uploads/Fozilatunnesa_Masuma_Photo.jpeg" alt="Masuma Fozilatunnesa" />
       <h3 class="text-center">Masuma Fozilatunnesa</h3>
       <p class="team-role">Master's student</p>
     </article>  
